@@ -58,14 +58,14 @@ const App = () => {
         <div className="container">
           <Alert alert={alert} />
           <Switch>
-            <Route exact path='/' render={props => (
+            <Route exact path={process.env.PUBLIC_URL + '/'} render={props => (
               <Fragment>
                 <Search searchUsers={searchUsers} clearUsers={clearUsers} showClear={users.length > 0 ? true : false} setAlert={showAlert} />
                 <Users loading={loading} users={users} />
               </Fragment>
             )} />
-            <Route exact path='/about' component={About} />
-            <Route exact path='/user/:login' render={props => (
+            <Route exact path={process.env.PUBLIC_URL + '/about'} component={About} />
+            <Route exact path={process.env.PUBLIC_URL + '/user/:login'} render={props => (
               <User {...props} getUser={getUser} getUserRepos={getUserRepos} repos={repos} user={user} loading={loading} />
             )} />
           </Switch>
