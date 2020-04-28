@@ -64,8 +64,8 @@ const App = () => {
                 <Users loading={loading} users={users} />
               </Fragment>
             )} />
-            <Route path='/about' component={About} />
-            <Route path='/user/:login' render={props => (
+            <Route exact path='/about' component={About} />
+            <Route exact path='/user/:login' render={props => (
               <User {...props} getUser={getUser} getUserRepos={getUserRepos} repos={repos} user={user} loading={loading} />
             )} />
           </Switch>
