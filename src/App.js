@@ -58,7 +58,7 @@ const App = () => {
         <div className="container">
           <Alert alert={alert} />
           <Switch>
-            <Route exact path='/' render={props => (
+            <Route exact path='https://kshubhranshu.github.io/github-finder-v-1.0.1/' render={props => (
               <Fragment>
                 <Search searchUsers={searchUsers} clearUsers={clearUsers} showClear={users.length > 0 ? true : false} setAlert={showAlert} />
                 <Users loading={loading} users={users} />
